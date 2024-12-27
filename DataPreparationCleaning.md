@@ -99,7 +99,7 @@ Once the data was satisfactorily cleaned, the datasets were designed using the p
 - The **Fact RevTX** table has many-to-one relationships with all the dimension tables.
 - These relationships enable flexible analysis by combining data from different dimensions.
 
-![Data Model](images/Data%20Model.png)
+![Data Model](images/MyRevolutDataModel.png)
 
 ## Data Dimension
 
