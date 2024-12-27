@@ -59,6 +59,8 @@ Once cleaned, the dataset was structured using the principles of fact and dimens
 ### Relationships:
 - The `Fact RevTX` table has many-to-one relationships with all dimension tables, enabling flexible data analysis.
 
+![Data Model](images/MyRevolutDataModel.png)
+
 ---
 
 ## Analysis and Visualization
@@ -142,5 +144,4 @@ The analysis illustrates trends such as:
 
 While this account is not intended for saving, the project demonstrates how data analysis can offer meaningful insights into financial behavior.
 
-#### Future Steps:
-- Explore recreating a similar report with sample data or alternative tools.
+- Although I cannot share the interactive Power BI dashboard, this document encapsulates the key findings and methodologies applied. In the future, I may explore recreating a similar report with sample data or alternative tools.
