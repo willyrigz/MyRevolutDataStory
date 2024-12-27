@@ -65,8 +65,8 @@ Once cleaned, the dataset was structured using the principles of fact and dimens
 I created several DAX measures to calculate key performance indicators (KPIs), including:
 
 ### DAX Measures:
-1. **Total Income**:
-   ```DAX
+**Total Income**:
+```DAX
    Total Income =
    CALCULATE(
        SUM('Fact RevTX'[Amount]),
@@ -74,29 +74,32 @@ I created several DAX measures to calculate key performance indicators (KPIs), i
    )
 ```
 
-2. **Total Expenses**:
-	```DAX
+**Total Expenses**:
+```DAX
 	Total Expenses =
 	CALCULATE(
 	    SUM('Fact RevTX'[Amount]),
 	    'Fact RevTX'[Income/Expense] = "Expense"
 	) * -1
-	```
-3. **Net Balance**:
-	```DAX
+```
+
+**Net Balance**:
+```DAX
 	Net Balance = [Total Income] - [Total Expenses]
-	```
-4. **Savings Rate**:
-	```DAX
+```
+
+**Savings Rate**:
+```DAX
 	Savings Rate =
 	DIVIDE(
 	    [Net Balance],
 	    [Total Income],
 	    0
 	)
-	```
-5. **YoY Expense Growth**:
-	```DAX
+```
+
+**YoY Expense Growth**:
+```DAX
 	YoY Expense Growth =
 	VAR CurrentYearExpense =
 	    CALCULATE (
@@ -110,7 +113,8 @@ I created several DAX measures to calculate key performance indicators (KPIs), i
 	    )
 	RETURN
 	    DIVIDE (CurrentYearExpense - PreviousYearExpense, PreviousYearExpense, 0)
-	```
+```
+
 ### Insights from the Report
 ![Revolut Report](images/RevolutReport.png)
 
