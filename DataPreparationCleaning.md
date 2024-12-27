@@ -25,6 +25,8 @@ For example:
     else if [Type] = "CARD_PAYMENT" and (Text.Contains([Description], "food") or Text.Contains([Description], "Burger King") 
         or Text.Contains([Description], "McDonalds")) then "Food & Dining"
     else "Other")
+```
+
 
 ## Fill Down Missing Balance Columns
 
@@ -34,6 +36,7 @@ If there are any gaps in the `"Balance"` column where values are missing, this c
 
 ```powerquery
 = Table.FillDown(#"Added Custom",{"Balance"})
+```
 
 ## Add Income/Expense Column
 
@@ -46,6 +49,7 @@ It checks the value in the `"Amount"` column of each row:
 
 ```powerquery
 = Table.AddColumn(#"Filled Down", "Income/Expense", each if([Amount]) > 0 then "Income" else "Expense")
+```
 
 ## Data Modeling
 
